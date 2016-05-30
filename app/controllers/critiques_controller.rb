@@ -1,6 +1,7 @@
 class CritiquesController < ApplicationController
   def index
-    @critiques = Critique.all
+    #@critiques = Critique.where(:user_id => current_user.id)
+    @critiques = current_user.critiques
   end
 
   def show
