@@ -11,9 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160530135738) do
+ActiveRecord::Schema.define(version: 20160530153831) do
 
   create_table "critiques", force: :cascade do |t|
+    t.integer  "metricfive"
+    t.integer  "metricfour"
+    t.integer  "metricthree"
+    t.integer  "metrictwo"
+    t.integer  "metricone"
     t.text     "description"
     t.string   "user_id"
     t.text     "name"

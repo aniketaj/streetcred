@@ -18,6 +18,51 @@
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
+      <!-- Label and input for metricfive -->
+      <div class="form-group">
+        <label for="metricfive" class="control-label">
+          Metricfive
+        </label>
+
+        <input type="text" id="metricfive" name="metricfive" placeholder="Metricfive" class="form-control" value="<%= @critique.metricfive %>">
+      </div>
+
+      <!-- Label and input for metricfour -->
+      <div class="form-group">
+        <label for="metricfour" class="control-label">
+          Metricfour
+        </label>
+
+        <input type="text" id="metricfour" name="metricfour" placeholder="Metricfour" class="form-control" value="<%= @critique.metricfour %>">
+      </div>
+
+      <!-- Label and input for metricthree -->
+      <div class="form-group">
+        <label for="metricthree" class="control-label">
+          Metricthree
+        </label>
+
+        <input type="text" id="metricthree" name="metricthree" placeholder="Metricthree" class="form-control" value="<%= @critique.metricthree %>">
+      </div>
+
+      <!-- Label and input for metrictwo -->
+      <div class="form-group">
+        <label for="metrictwo" class="control-label">
+          Metrictwo
+        </label>
+
+        <input type="text" id="metrictwo" name="metrictwo" placeholder="Metrictwo" class="form-control" value="<%= @critique.metrictwo %>">
+      </div>
+
+      <!-- Label and input for metricone -->
+      <div class="form-group">
+        <label for="metricone" class="control-label">
+          Metricone
+        </label>
+
+        <input type="text" id="metricone" name="metricone" placeholder="Metricone" class="form-control" value="<%= @critique.metricone %>">
+      </div>
+
       <!-- Label and input for description -->
       <div class="form-group">
         <label for="description" class="control-label">

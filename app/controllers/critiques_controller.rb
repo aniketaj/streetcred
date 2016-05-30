@@ -13,6 +13,11 @@ class CritiquesController < ApplicationController
 
   def create
     @critique = Critique.new
+    @critique.metricfive = params[:metricfive]
+    @critique.metricfour = params[:metricfour]
+    @critique.metricthree = params[:metricthree]
+    @critique.metrictwo = params[:metrictwo]
+    @critique.metricone = params[:metricone]
     @critique.description = params[:description]
     @critique.user_id = params[:user_id]
     @critique.name = params[:name]
@@ -31,6 +36,11 @@ class CritiquesController < ApplicationController
   def update
     @critique = Critique.find(params[:id])
 
+    @critique.metricfive = params[:metricfive]
+    @critique.metricfour = params[:metricfour]
+    @critique.metricthree = params[:metricthree]
+    @critique.metrictwo = params[:metrictwo]
+    @critique.metricone = params[:metricone]
     @critique.description = params[:description]
     @critique.user_id = params[:user_id]
     @critique.name = params[:name]
