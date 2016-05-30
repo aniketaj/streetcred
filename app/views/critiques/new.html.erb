@@ -17,93 +17,177 @@
     <form action="/create_critique" method="post">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+<!-- ____________________________________________________________________________________________-->
 
       <!-- Label and input for metricone -->
       <div class="form-group">
         <label for="metricone" class="control-label">
-          Collaboration + Encouragement
-        </label>
+          <h5 Bootstrap heading><strong>
+            Collaboration + Encouragement
+          </strong>
+        </h5>
 
-        <input type="text" id="metricone" name="metricone" placeholder="Metricone" class="form-control" value="<%= @critique.metricone %>">
-      </div>
+        <p class="lead"> <em>
+          Did the team member foster collaboration by enabling others to share ideas and take risks without feeling embarrassed or insecure?
+        </em>
+      </p>
+    </label>
 
-      <select>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-
-      <!-- Label and input for metrictwo -->
-      <div class="form-group">
-        <label for="metrictwo" class="control-label">
-          Metrictwo
-        </label>
-
-        <input type="text" id="metrictwo" name="metrictwo" placeholder="Metrictwo" class="form-control" value="<%= @critique.metrictwo %>">
-      </div>
-
-      <!-- Label and input for metricthree -->
-      <div class="form-group">
-        <label for="metricthree" class="control-label">
-          Metricthree
-        </label>
-
-        <input type="text" id="metricthree" name="metricthree" placeholder="Metricthree" class="form-control" value="<%= @critique.metricthree %>">
-      </div>
-
-      <!-- Label and input for metricfour -->
-      <div class="form-group">
-        <label for="metricfour" class="control-label">
-          Metricfour
-        </label>
-
-        <input type="text" id="metricfour" name="metricfour" placeholder="Metricfour" class="form-control" value="<%= @critique.metricfour %>">
-      </div>
-
-      <!-- Label and input for metricfive -->
-      <div class="form-group">
-        <label for="metricfive" class="control-label">
-          Metricfive
-        </label>
-
-        <input type="text" id="metricfive" name="metricfive" placeholder="Metricfive" class="form-control" value="<%= @critique.metricfive %>">
-      </div>
-
-
-      <!-- Label and input for description -->
-      <div class="form-group">
-        <label for="description" class="control-label">
-          Description
-        </label>
-
-        <textarea id="description" name="description" placeholder="Description" class="form-control" rows="3"><%= @critique.description %></textarea>
-      </div>
-
-      <!-- Label and input for user_id -->
-      <div class="form-group">
-        <label for="user_id" class="control-label">
-          User
-        </label>
-
-        <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @critique.user_id %>">
-      </div>
-
-      <!-- Label and input for name -->
-      <div class="form-group">
-        <label for="name" class="control-label">
-          Name
-        </label>
-
-        <textarea id="name" name="name" placeholder="Name" class="form-control" rows="3"><%= @critique.name %></textarea>
-      </div>
-
-      <button class="btn btn-success">
-        Create Critique
-      </button>
-      or
-      <a href="/critiques">Cancel</a>
-    </form>
+    <!--
+    <input type="text" id="metricone" name="metricone" placeholder="Metricone" class="form-control" value="<%= @critique.metricone %>">
   </div>
+-->
+<select class="form-control" name="metricone">
+  <option style="color:red">1</option>
+  <option style="color:orange">2</option>
+  <option style="color:purple">3</option>
+  <option style="color:blue">4</option>
+  <option style="color:green">5</option>
+</select>
+
+<!-- Label and input for metrictwo -->
+<div class="form-group">
+  <label for="metrictwo" class="control-label">
+    <h5 Bootstrap heading><strong>
+    Reliability
+    </strong>
+  </h5>
+
+  <p class="lead"> <em>
+    Could you count on the team member to attend meetings on time, seek out tasks and complete agreed work as per schedule?
+  </em>
+</p>
+</label>
+
+<select class="form-control" name="metrictwo">
+<option style="color:red">1</option>
+<option style="color:orange">2</option>
+<option style="color:purple">3</option>
+<option style="color:blue">4</option>
+<option style="color:green">5</option>
+</select>
+<!-- ******************************** -->
+
+<!-- Label and input for metricthree -->
+<div class="form-group">
+  <label for="metricthree" class="control-label">
+    <h5 Bootstrap heading><strong>
+    Structure + Communication
+    </strong>
+  </h5>
+  <p class="lead"> <em>
+    Did the team member clearly communicate about team goals, roles and execution?
+  </em>
+</p>
+</label>
+
+<select class="form-control" name="metricthree">
+<option " style="color:red">1</option>
+<option " style="color:orange">2</option>
+<option " style="color:purple">3</option>
+<option " style="color:blue">4</option>
+<option " style="color:green">5</option>
+</select>
+<!-- ******************************** -->
+
+<!-- Label and input for metricfour -->
+<div class="form-group">
+  <label for="metricfour" class="control-label">
+    <h5 Bootstrap heading><strong>
+    Committment
+    </strong>
+  </h5>
+  <p class="lead"> <em>
+    Did the team member demonstrate committment to team objectives, and prioritize high quality outcomes?
+  </em>
+  </p>
+  </label>
+
+  <select class="form-control" name="metricfour">
+  <option style="color:red">1</option>
+  <option style="color:orange">2</option>
+  <option style="color:purple">3</option>
+  <option style="color:blue">4</option>
+  <option style="color:green">5</option>
+  </select>
+  <!-- ******************************** -->
+
+<!-- Label and input for metricfive -->
+<div class="form-group">
+  <label for="metricfive" class="control-label">
+<hr>
+    <h4 Bootstrap heading><strong>
+    Total Score
+    </strong>
+  </h4>
+  </label>
+
+<!--  <input type="text" id="metricfive" name="metricfive" placeholder="Metricfive" class="form-control" value="<%= @critique.metricfive %>">
+-->
+<select class="form-control" name="metricfive">
+<option style="color:red">1</option>
+<option style="color:red">2</option>
+<option style="color:red">3</option>
+<option style="color:red">4</option>
+<option style="color:orange">5</option>
+<option style="color:orange">6</option>
+<option style="color:orange">7</option>
+<option style="color:orange">8</option>
+<option style="color:purple">9</option>
+<option style="color:purple">10</option>
+<option style="color:purple">11</option>
+<option style="color:purple">12</option>
+<option style="color:blue">13</option>
+<option style="color:blue">14</option>
+<option style="color:blue">15</option>
+<option style="color:blue">16</option>
+<option style="color:green">17</option>
+<option style="color:green">18</option>
+<option style="color:green">19</option>
+<option style="color:green">20</option>
+
+</select>
+</div>
+
+
+<!-- Label and input for description -->
+<div class="form-group">
+  <label for="description" class="control-label">
+    <h5 Bootstrap heading><strong>
+    Description
+  </strong> </h5>
+  </label>
+
+  <textarea id="description" name="description" placeholder="Description" class="form-control" rows="3"><%= @critique.description %></textarea>
+</div>
+
+<!-- Label and input for user_id -->
+<div class="form-group">
+  <label for="user_id" class="control-label">
+    <h5 Bootstrap heading><strong>
+    User
+  </strong> </h5>
+  </label>
+
+  <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @critique.user_id %>">
+</div>
+
+<!-- Label and input for name -->
+<div class="form-group">
+  <label for="name" class="control-label">
+    <h5 Bootstrap heading><strong>
+  Feedback title
+</strong> </h5>
+  </label>
+
+  <textarea id="name" name="name" placeholder="Name" class="form-control" rows="3"><%= @critique.name %></textarea>
+</div>
+
+<button class="btn btn-success">
+  Create Critique
+</button>
+or
+<a href="/critiques">Cancel</a>
+</form>
+</div>
 </div>

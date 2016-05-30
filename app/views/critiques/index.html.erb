@@ -9,16 +9,13 @@
   <div class="col-md-12">
     <table class="table table-striped table-hover">
       <tr>
-<th>Name</th>
-<th>Description</th>
-    <th>Metricone</th>
-
-
+        <th>Name</th>
+        <th>Description</th>
+        <th>Metricone</th>
         <th>Metrictwo</th>
-              <th>Metricthree</th>
-          <th>Metricfour</th>
-          <th>Metricfive</th>
-
+        <th>Metricthree</th>
+        <th>Metricfour</th>
+        <th>Metricfive</th>
         <th>User</th>
 
         <th>Actions</th>
@@ -26,14 +23,14 @@
 
       <% @critiques.each do |critique| %>
       <tr>
-        <td><%= critique.metricfive %></td>
-        <td><%= critique.metricfour %></td>
-        <td><%= critique.metricthree %></td>
-        <td><%= critique.metrictwo %></td>
-        <td><%= critique.metricone %></td>
-        <td><%= critique.description %></td>
-        <td><%= critique.user_id %></td>
         <td><%= critique.name %></td>
+        <td><%= critique.description %></td>
+        <td><%= critique.metricone %></td>
+        <td><%= critique.metrictwo %></td>
+        <td><%= critique.metricthree %></td>
+        <td><%= critique.metricfour %></td>
+        <td><%= critique.metricfive %></td>
+        <td><%= critique.user_id %></td>
         <td>
           <a href="/critiques/<%= critique.id %>" class="btn btn-primary">Show</a>
           <a href="/critiques/<%= critique.id %>/edit" class="btn btn-warning">Edit</a>
