@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+root "critiques#index"
   # Routes for the Critique resource:
   # CREATE
   get "/critiques/new", :controller => "critiques", :action => "new"
