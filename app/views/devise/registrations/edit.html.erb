@@ -22,10 +22,157 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
+
+
+<!-- EXTRA COLUMNS ADDED BY ANIKET -->
+<!-- IMAGE URL -->
+<div class="form-group">
+  <label for="imageurl" class="control-label">
+    <h6>
+      Image URL
+    </h6>
+  </label>
+  <textarea id="imageurl" name="imageurl" placeholder="imageurl" class="form-control" rows="1"><%= @user.imageurl %></textarea>
+</div>
+
+<!-- First Name -->
+<div class="form-group">
+  <label for="firstname" class="control-label">
+    <h6>
+      First Name
+    </h6>
+  </label>
+  <textarea id="firstname" name="firstname" placeholder="firstname" class="form-control" rows="1"><%= @user.firstname %></textarea>
+</div>
+
+<!-- last Name -->
+<div class="form-group">
+  <label for="lastname" class="control-label">
+    <h6>
+      Last Name
+    </h6>
+  </label>
+  <textarea id="lastname" name="lastname" placeholder="lastname" class="form-control" rows="1"><%= @user.lastname %></textarea>
+</div>
+
+<!-- program -->
+<div class="form-group">
+  <label for="program" class="control-label">
+    <h6>
+      Program
+    </h6>
+  </label>
+  <select class="form-control" name="program">
+    <option>MMM</option>
+    <option>2Y FT MBA</option>
+    <option>1Y FT MBA</option>
+    <option>JD-MBA</option>
+    <option>PT MBA</option>
+  </select>
+</div>
+
+<!-- gradyear -->
+<div class="form-group">
+  <label for="gradyear" class="control-label">
+    <h6>
+      Graduation Year
+    </h6>
+  </label>
+  <select class="form-control" name="gradyear">
+    <option>2016</option>
+    <option>2017</option>
+    <option>2018</option>
+    <option>2019</option>
+  </select>
+</div>
+
+<!-- funcexpert -->
+<div class="form-group">
+  <label for="funcexpert" class="control-label">
+    <h6>
+      Functional Expertise
+    </h6>
+  </label>
+  <select class="form-control" name="funcexpert">
+    <option>Accounting</option>
+    <option>Economics</option>
+    <option>Entrepreneurship</option>
+    <option>Finance</option>
+    <option>General Management</option>
+    <option>Innovation</option>
+    <option>Consulting</option>
+    <option>Marketing</option>
+
+    <option>Operations</option>
+
+  </select>
+</div>
+
+<!-- indexpert -->
+<div class="form-group">
+  <label for="indexpert" class="control-label">
+    <h6>
+      Industry
+    </h6>
+  </label>
+  <select class="form-control" name="indexpert">
+    <option>Aerospace</option>
+    <option>Automotive</option>
+    <option>Consulting</option>
+
+    <option>Consumer products and retail </option>
+
+    <option>Design</option>
+    <option>Education</option>
+    <option>Fashion and apparel </option>
+    <option>Healthcare</option>
+    <option>Media, entertainment and advertising</option>
+    <option>Technology</option>
+  </select>
+</div>
+
+<!-- poet or quant -->
+<div class="form-group">
+  <label for="poetquant" class="control-label">
+    <h6>
+      Poet or Quant ?
+    </h6>
+  </label>
+  <select class="form-control" name="poetquant">
+    <option>Poet</option>
+    <option>Quant</option>
+  </select>
+</div>
+
+<!-- best time of day -->
+<div class="form-group">
+  <label for="efftime" class="control-label" >
+    <h6>
+      Are you a morning person, a night owl or efficient all through the day
+    </h6>
+  </label>
+  <select class="form-control" name="efftime">
+    <option>Morning Lark</option>
+    <option>Night Owl</option>
+    <option>It doesn't matter </option>
+  </select>
+</div>
+
+<!-- LINKEDIN URL -->
+<div class="form-group">
+  <label for="liprofile" class="control-label">
+    <h6>
+      Linkedin Public Profile URL
+    </h6>
+  </label>
+  <textarea id="liprofile" name="liprofile" placeholder="Paste your linkedin Public profile here" class="form-control" rows="1"><%= @user.liprofile %></textarea>
+</div>
+
+<!-- ************************** -->
+<div class="field">
+  <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+  <%= f.password_field :current_password, autocomplete: "off" %>
+</div>
 
   <div class="actions">
     <%= f.submit "Update" %>

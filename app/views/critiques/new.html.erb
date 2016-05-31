@@ -19,6 +19,21 @@
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 <!-- ____________________________________________________________________________________________-->
 
+  <div class="form-group">
+<label for="user_id" class="control-label">
+  <h5 Bootstrap heading><strong>
+    Give feedback to:
+  </strong>
+  </h5>
+</label>
+
+<select class="form-control" name="user_id">
+<% User.all.each do |user| %>
+  <option> <%=user.firstname%> </option>
+<% end %>
+</select>
+  </div>
+
       <!-- Label and input for metricone -->
       <div class="form-group">
         <label for="metricone" class="control-label">
