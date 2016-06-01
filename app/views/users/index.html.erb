@@ -1,16 +1,17 @@
 <%= search_form_for @q do |f| %>
   <p class="lead">Narrow results:</p>
 
+
+
   <div class="form-group">
-    <%= f.label :id_eq, "First Name" %>
-    <%= f.select :id_eq, options_from_collection_for_select(User.all, :id, :firstname, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
+    <%= f.label :id_eq, "Program" %>
+    <%= f.select :id_eq, options_from_collection_for_select(User.all, :id, :program, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :id_eq, "Email" %>
-    <%= f.select :id_eq, options_from_collection_for_select(User.all, :id, :email, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
+    <%= f.label :id_eq, "Graduation Year" %>
+    <%= f.select :id_eq, options_from_collection_for_select(User.all, :id, :gradyear, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
   </div>
-
 
   <%= f.submit :class => "btn btn-primary btn-block" %>
 
