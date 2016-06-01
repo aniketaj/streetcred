@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  
+
   root "critiques#index"
+
+# ANIKET USER ROUTES TO SHOW USERS
+  get "/critiques/find_friends", :controller => "users", :action => "index"
+
   # Routes for the Critique resource:
   # CREATE
   get "/critiques/new", :controller => "critiques", :action => "new"

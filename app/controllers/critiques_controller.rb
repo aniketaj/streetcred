@@ -14,7 +14,7 @@ class CritiquesController < ApplicationController
 
   def create
     @critique = Critique.new
-    @critique.metricfive = params[:metricfive]
+    @critique.metricfive = params[:metricone].to_i + params[:metrictwo].to_i + params[:metricthree].to_i + params[:metricfour].to_i
     @critique.metricfour = params[:metricfour]
     @critique.metricthree = params[:metricthree]
     @critique.metrictwo = params[:metrictwo]

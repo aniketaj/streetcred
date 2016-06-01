@@ -26,13 +26,9 @@
   </strong>
   </h5>
 </label>
+<!-- ANiket added the next lines of code -->
 
-<select class="form-control" name="user_id">
-<% User.all.each do |user| %>
-  <option> <%=user.firstname%> </option>
-<% end %>
-</select>
-  </div>
+  <%= select_tag :user_id, options_from_collection_for_select(User.all, :id, :firstname, @critique.user_id), :class => "form-control" %>
 
       <!-- Label and input for metricone -->
       <div class="form-group">
@@ -141,30 +137,6 @@
 
 <!--  <input type="text" id="metricfive" name="metricfive" placeholder="Metricfive" class="form-control" value="<%= @critique.metricfive %>">
 -->
-<select class="form-control" name="metricfive">
-<option style="color:red">1</option>
-<option style="color:red">2</option>
-<option style="color:red">3</option>
-<option style="color:red">4</option>
-<option style="color:orange">5</option>
-<option style="color:orange">6</option>
-<option style="color:orange">7</option>
-<option style="color:orange">8</option>
-<option style="color:purple">9</option>
-<option style="color:purple">10</option>
-<option style="color:purple">11</option>
-<option style="color:purple">12</option>
-<option style="color:blue">13</option>
-<option style="color:blue">14</option>
-<option style="color:blue">15</option>
-<option style="color:blue">16</option>
-<option style="color:green">17</option>
-<option style="color:green">18</option>
-<option style="color:green">19</option>
-<option style="color:green">20</option>
-
-</select>
-</div>
 
 
 <!-- Label and input for description -->

@@ -29,7 +29,7 @@
       Image URL
     </h6>
   </label>
-  <textarea id="imageurl" name="imageurl" placeholder="imageurl" class="form-control" rows="1"><%= @user.imageurl %></textarea>
+  <textarea id="imageurl" name="user[imageurl]" placeholder="imageurl" class="form-control" rows="1"><%= current_user.try(:imageurl) %></textarea>
 </div>
 
 <!-- First Name -->
@@ -39,7 +39,7 @@
       First Name
     </h6>
   </label>
-  <textarea id="firstname" name="firstname" placeholder="firstname" class="form-control" rows="1"><%= @user.firstname %></textarea>
+  <textarea id="firstname" name="user[firstname]" placeholder="firstname" class="form-control" rows="1"><%= current_user.try(:firstname) %></textarea>
 </div>
 
 <!-- last Name -->
@@ -49,7 +49,7 @@
       Last Name
     </h6>
   </label>
-  <textarea id="lastname" name="lastname" placeholder="lastname" class="form-control" rows="1"><%= @user.lastname %></textarea>
+  <textarea id="lastname" name="user[lastname]" placeholder="lastname" class="form-control" rows="1"><%= current_user.try(:lastname) %></textarea>
 </div>
 
 <!-- program -->
@@ -59,7 +59,7 @@
       Program
     </h6>
   </label>
-  <select class="form-control" name="program">
+  <select class="form-control" name="user[program]">
     <option>MMM</option>
     <option>2Y FT MBA</option>
     <option>1Y FT MBA</option>
@@ -75,7 +75,7 @@
       Graduation Year
     </h6>
   </label>
-  <select class="form-control" name="gradyear">
+  <select class="form-control" name="user[gradyear]">
     <option>2016</option>
     <option>2017</option>
     <option>2018</option>
@@ -90,7 +90,7 @@
       Functional Expertise
     </h6>
   </label>
-  <select class="form-control" name="funcexpert">
+  <select class="form-control" name="user[funcexpert]">
     <option>Accounting</option>
     <option>Economics</option>
     <option>Entrepreneurship</option>
@@ -112,7 +112,7 @@
       Industry
     </h6>
   </label>
-  <select class="form-control" name="indexpert">
+  <select class="form-control" name="user[indexpert]">
     <option>Aerospace</option>
     <option>Automotive</option>
     <option>Consulting</option>
@@ -135,7 +135,8 @@
       Poet or Quant ?
     </h6>
   </label>
-  <select class="form-control" name="poetquant">
+
+  <select class="form-control" name="user[poetquant]">
     <option>Poet</option>
     <option>Quant</option>
   </select>
@@ -148,7 +149,7 @@
       Are you a morning person, a night owl or efficient all through the day
     </h6>
   </label>
-  <select class="form-control" name="efftime">
+  <select class="form-control" name="user[efftime]">
     <option>Morning Lark</option>
     <option>Night Owl</option>
     <option>It doesn't matter </option>
@@ -162,7 +163,7 @@
       Linkedin Public Profile URL
     </h6>
   </label>
-  <textarea id="liprofile" name="liprofile" placeholder="Paste your linkedin Public profile here" class="form-control" rows="1"><%= @user.liprofile %></textarea>
+  <textarea id="liprofile" name="user[liprofile]" placeholder="Paste your linkedin Public profile here" class="form-control" rows="1"><%= current_user.try(:liprofile) %></textarea>
 </div>
 
 <!-- ************************** -->

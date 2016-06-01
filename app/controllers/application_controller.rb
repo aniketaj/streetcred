@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :poetquant
     devise_parameter_sanitizer.for(:sign_up) << :efftime
     devise_parameter_sanitizer.for(:sign_up) << :liprofile
+    devise_parameter_sanitizer.for(:sign_up) << :imageurl
 
     devise_parameter_sanitizer.for(:account_update) << :firstname
     devise_parameter_sanitizer.for(:account_update) << :lastname
@@ -29,7 +30,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) << :poetquant
     devise_parameter_sanitizer.for(:account_update) << :efftime
     devise_parameter_sanitizer.for(:account_update) << :liprofile
-    #devise_parameter_sanitizer.for(:account_update) << :avatar_url
+    devise_parameter_sanitizer.for(:account_update) << :imageurl
   end
 
 end

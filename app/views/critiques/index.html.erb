@@ -1,8 +1,8 @@
 <div class="page-header">
-  <h1>
-    Critiques
-    <a href="/critiques/new" class="btn btn-lg btn-success">New Critique</a>
-  </h1>
+  <h3>
+    MY RECEIVED? FEEDBACKS
+    <!--<a href="/critiques/new" class="btn btn-lg btn-success">New Critique</a> -->
+  </h3>
 </div>
 
 <div class="row">
@@ -11,26 +11,26 @@
       <tr>
         <th>Name</th>
         <th>Description</th>
-        <th>Metricone</th>
-        <th>Metrictwo</th>
-        <th>Metricthree</th>
-        <th>Metricfour</th>
-        <th>Metricfive</th>
-        <th>User</th>
+        <th>Collaboration</th>
+        <th>Reliability</th>
+        <th>Communication</th>
+        <th>Committment</th>
+        <th>TOTAL SCORE</th>
+    <!--    <th>User</th> -->
 
         <th>Actions</th>
       </tr>
 
       <% @critiques.each do |critique| %>
       <tr>
-        <td><%= critique.name %></td>
+        <td><strong><%= critique.name %></strong></td>
         <td><%= critique.description %></td>
-        <td><%= critique.metricone %></td>
-        <td><%= critique.metrictwo %></td>
-        <td><%= critique.metricthree %></td>
-        <td><%= critique.metricfour %></td>
-        <td><%= critique.metricfive %></td>
-        <td><%= critique.user_id %></td>
+        <td><strong><%= critique.metricone %></strong></td>
+        <td><strong><%= critique.metrictwo %></strong></td>
+        <td><strong><%= critique.metricthree %></strong></td>
+        <td><strong><%= critique.metricfour %></strong></td>
+        <td><strong><%= critique.metricfive %></strong></td>
+      <!--  <td><%= critique.user_id %></td> -->
         <td>
           <a href="/critiques/<%= critique.id %>" class="btn btn-primary">Show</a>
           <a href="/critiques/<%= critique.id %>/edit" class="btn btn-warning">Edit</a>
@@ -40,4 +40,13 @@
       <% end %>
     </table>
   </div>
+
+
+<tr>
+  <h3>
+    PROVIDE FEEDBACK </h3>
+  </tr>
+
+    <a href="/critiques/find_friends" class="btn btn-lg btn-primary">Find Friends and Provide Feedback</a>
+
 </div>
