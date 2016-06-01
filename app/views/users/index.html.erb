@@ -2,19 +2,19 @@
   <p class="lead">Narrow results:</p>
 
   <div class="form-group">
-    <%= f.label :users_id_eq, "First Name" %>
-    <%= f.select :users_id_eq, options_from_collection_for_select(User.all, :id, :firstname, @q.actors_id_eq), { :include_blank => true }, :class => "form-control" %>
+    <%= f.label :user_id_eq, "First Name" %>
+    <%= f.select :user_id_eq, options_from_collection_for_select(User.all, :id, :firstname, @q.user_id_eq), { :include_blank => true }, :class => "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :users_id_eq, "Email" %>
-    <%= f.select :users_id_eq, options_from_collection_for_select(User.all, :id, :email, @q.actors_id_eq), { :include_blank => true }, :class => "form-control" %>
+    <%= f.label :user_id_eq, "Email" %>
+    <%= f.select :user_id_eq, options_from_collection_for_select(User.all, :id, :email, @q.user_id_eq), { :include_blank => true }, :class => "form-control" %>
   </div>
 
 
   <%= f.submit :class => "btn btn-primary btn-block" %>
 
 <!--unsure about where the clear filters tab should direct the page? Refresh to same page> users/index?-->
-  <a href="/users/index" class="btn btn-default btn-block">??Clear filters??</a>
+  <a href="/users" class="btn btn-default btn-block">Clear filters</a>
 
 <% end %>
