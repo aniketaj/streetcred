@@ -2,13 +2,13 @@
   <p class="lead">Narrow results:</p>
 
   <div class="form-group">
-    <%= f.label :user_id_eq, "First Name" %>
-    <%= f.select :user_id_eq, options_from_collection_for_select(User.all, :id, :firstname, @q.user_id_eq), { :include_blank => true }, :class => "form-control" %>
+    <%= f.label :id_eq, "First Name" %>
+    <%= f.select :id_eq, options_from_collection_for_select(User.all, :id, :firstname, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :user_id_eq, "Email" %>
-    <%= f.select :user_id_eq, options_from_collection_for_select(User.all, :id, :email, @q.user_id_eq), { :include_blank => true }, :class => "form-control" %>
+    <%= f.label :id_eq, "Email" %>
+    <%= f.select :id_eq, options_from_collection_for_select(User.all, :id, :email, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
   </div>
 
 
@@ -16,5 +16,7 @@
 
 <!--unsure about where the clear filters tab should direct the page? Refresh to same page> users/index?-->
   <a href="/users" class="btn btn-default btn-block">Clear filters</a>
+
+<%= @q.result %>
 
 <% end %>
