@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   #  @user = current_user.critiques
     def index
       @q = User.ransack(params[:q])
-      @users = @q.result
+      @users = @q.result(:distinct => true).includes(:firstname, :email)
     end
   #end
 

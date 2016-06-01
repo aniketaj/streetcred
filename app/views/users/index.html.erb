@@ -2,21 +2,19 @@
   <p class="lead">Narrow results:</p>
 
   <div class="form-group">
-    <%= f.label :title_cont, "Title containing" %>
-    <%= f.text_field :title_cont, :class => "form-control", :placeholder => "Enter a few characters" %>
+    <%= f.label :users_id_eq, "First Name" %>
+    <%= f.select :users_id_eq, options_from_collection_for_select(User.all, :id, :firstname, @q.actors_id_eq), { :include_blank => true }, :class => "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :year_gteq, "Released after" %>
-    <%= f.text_field :year_gteq, :class => "form-control", :placeholder => "Year greater than or equal to" %>
+    <%= f.label :users_id_eq, "Email" %>
+    <%= f.select :users_id_eq, options_from_collection_for_select(User.all, :id, :email, @q.actors_id_eq), { :include_blank => true }, :class => "form-control" %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :year_lteq, "Released before" %>
-    <%= f.text_field :year_lteq, :class => "form-control", :placeholder => "Year less than or equal to" %>
-  </div>
 
   <%= f.submit :class => "btn btn-primary btn-block" %>
 
-  <a href="/movies" class="btn btn-default btn-block">Clear filters</a>
+<!--unsure about where the clear filters tab should direct the page? Refresh to same page> users/index?-->
+  <a href="/users/index" class="btn btn-default btn-block">??Clear filters??</a>
+
 <% end %>

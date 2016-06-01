@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   root "critiques#index"
 
-# ANIKET USER ROUTES TO SHOW USERS
-  get "/critiques/find_friends", :controller => "users", :action => "index"
+# ANIKET USER ROUTES TO FIND AND RANSACK USERS
+  get "/users/index", :controller => "users", :action => "index"
 
   # Routes for the Critique resource:
   # CREATE
