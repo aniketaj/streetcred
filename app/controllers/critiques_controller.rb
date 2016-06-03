@@ -10,6 +10,7 @@ class CritiquesController < ApplicationController
 
   def new
     @critique = Critique.new
+    @critique.user_id = params[:user_id]
   end
 
   def create
