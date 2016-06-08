@@ -126,28 +126,43 @@
   <!-- ******************************** -->
 
 
-<div class="form-group">
+<!-- <div class="form-group">
   <label for="metricfive" class="control-label">
 <hr>
     <h4 Bootstrap heading><strong>
     Total Score
-    </strong>
+      </strong>
   </h4>
   </label>
+  <p>
+    <%= @critique.metricfive %>
+  </p>
+
+</div> -->
 
 <!--  <input type="text" id="metricfive" name="metricfive" placeholder="Metricfive" class="form-control" value="<%= @critique.metricfive %>">
 -->
+<!--< Label and input for name -->
+<div class="form-group">
+  <label for="name" class="control-label">
+    <h5 Bootstrap heading><strong>
+  Feedback title
+</strong> </h5>
+  </label>
+
+  <textarea id="name" name="name" placeholder="Feedback Title" class="form-control" rows="3"><%= @critique.name %></textarea>
+</div>
 
 
 <!-- Label and input for description -->
 <div class="form-group">
   <label for="description" class="control-label">
     <h5 Bootstrap heading><strong>
-    Description
+    Feedback Description
   </strong> </h5>
   </label>
 
-  <textarea id="description" name="description" placeholder="Description" class="form-control" rows="3"><%= @critique.description %></textarea>
+  <textarea id="description" name="description" placeholder="Provide insights and specific examples ilustrating those insights. Use the space to reveal information about your self or the project in case you don't want the feedback to be anonymous" class="form-control" rows="3"><%= @critique.description %></textarea>
 </div>
 
 <!-- HIDDEN input for user_id -->
@@ -161,19 +176,9 @@
   <input type="hidden" id="user_id" name="user_id" class="form-control" value="<%= current_user.id %>">
 <!--</div> -->
 
-<!--< Label and input for name -->
-<div class="form-group">
-  <label for="name" class="control-label">
-    <h5 Bootstrap heading><strong>
-  Feedback title
-</strong> </h5>
-  </label>
-
-  <textarea id="name" name="name" placeholder="Name" class="form-control" rows="3"><%= @critique.name %></textarea>
-</div>
 
 <button class="btn btn-success">
-  Create Critique
+  Submit Feedback
 </button>
 or
 <a href="/critiques">Cancel</a>
