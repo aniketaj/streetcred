@@ -27,8 +27,19 @@
   </h5>
 </label>
 <!-- ANiket added the next lines of code -->
-
   <%= select_tag :user_id, options_from_collection_for_select(User.all, :id, :firstname, @critique.user_id), :class => "form-control" %>
+
+  <!-- HIDDEN input for receiver_id -->
+  <!--<div class="form-group">
+    <label for="user_id" class="control-label">
+      <h5 Bootstrap heading><strong>
+      Your user ID
+    </strong> </h5>
+    </label>
+  -->
+    <input type="string" id="receiver_id" name="receiver_id" class="form-control" value="<%= @critique.user_id %>">
+  <!--</div> -->
+
 
       <!-- Label and input for metricone -->
       <div class="form-group">
