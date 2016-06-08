@@ -20,16 +20,17 @@
 <!-- ____________________________________________________________________________________________-->
 
   <div class="form-group">
-<label for="user_id" class="control-label">
+<!--<label for="user_id" class="control-label">
   <h5 Bootstrap heading><strong>
     Give feedback to:
   </strong>
   </h5>
-</label>
+</label> -->
 <!-- ANiket added the next lines of code -->
 
 
-   <%= select_tag :receiver_id, options_from_collection_for_select(User.all, :id, :firstname, @critique.receiver_id), :class => "form-control" %>
+<!--   <%= select_tag :receiver_id, options_from_collection_for_select(User.all, :id, :firstname, @critique.receiver_id), :class => "form-control" %> -->
+
 
   <!-- HIDDEN input for receiver_id -->
   <!--<div class="form-group">
@@ -39,7 +40,7 @@
     </strong> </h5>
     </label>
   -->
-    <input type="string" id="receiver_id" name="receiver_id" class="form-control" value="<%= @critique.receiver_id %>">
+    <input type="hidden" id="receiver_id" name="receiver_id" class="form-control" value="<%= @critique.user_id %>"> </input>
   <!--</div> -->
 
 
