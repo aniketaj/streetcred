@@ -2,6 +2,7 @@ class CritiquesController < ApplicationController
   def index
     #@critiques = Critique.where(:user_id => current_user.id)
     @critiques = current_user.critiques
+    @receivedfbs = Critique.where(:receiver_id => current_user.id)
   end
 
   def show
@@ -11,6 +12,7 @@ class CritiquesController < ApplicationController
   def new
     @critique = Critique.new
     @critique.user_id = params[:user_id]
+    @critique.receiver_id = params[:receiver_id]
   end
 
   def create
@@ -23,6 +25,7 @@ class CritiquesController < ApplicationController
     @critique.description = params[:description]
     @critique.user_id = params[:user_id]
     @critique.name = params[:name]
+    @critique.receiver_id = params[:receiver_id]
 
     if @critique.save
       redirect_to "/critiques", :notice => "Critique created successfully."

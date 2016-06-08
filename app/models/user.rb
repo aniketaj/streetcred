@@ -4,5 +4,13 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :critiques       
+  has_many :critiques
+
+  validates :firstname, :presence=>true
+  validates :lastname, :presence=>true
+  validates :funcexpert, :presence=>true
+  validates :indexpert, :presence=>true
+
+
+
 end

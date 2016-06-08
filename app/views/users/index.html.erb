@@ -1,32 +1,62 @@
 <%= search_form_for @q do |f| %>
-  <p class="lead">Narrow results:</p>
+<p class="lead">Narrow results:</p>
 
-  <div class="form-group">
-    <%= f.label :program_eq, "Program" %>
-    <%#= f.select :id_eq, options_from_collection_for_select(User.all, :id, :program, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
-    <%= f.select :program_eq, options_for_select( ["MMM", "2Y FT MBA"], @q.program_eq), { :include_blank => true }, :class => "form-control" %>
+<div class="form-group">
+  <%= f.label :program_eq, "Program" %>
+  <%#= f.select :id_eq, options_from_collection_for_select(User.all, :id, :program, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
+  <%= f.select :program_eq, options_for_select( ["MMM", "2Y FT MBA"], @q.program_eq), { :include_blank => true }, :class => "form-control" %>
 
-  </div>
-
-  <div class="form-group">
-    <%= f.label :gradyear_eq, "Graduation Year" %>
-    <%#= f.select :id_eq, options_from_collection_for_select(User.all, :id, :gradyear, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
-    <%= f.select :gradyear_eq, options_for_select( ["2017", "2016", "2018"],  @q.gradyear_eq), { :include_blank => true }, :class => "form-control" %>
-  </div>
-
-  <%= f.submit :class => "btn btn-primary btn-block" %>
-<!--unsure about where the clear filters tab should direct the page? Refresh to same page> users/index?-->
-  <a href="/users" class="btn btn-default btn-block">Clear filters</a>
-
-<% @q.result.each do |user| %>
-<div class="form-control">
-  <%= user.email  %>
-
-<a href="/critiques/new?user_id=<%= user.id %>" class="btn btn-success"> Provide Feedback</a>
 </div>
 
+<div class="form-group">
+  <%= f.label :gradyear_eq, "Graduation Year" %>
+  <%#= f.select :id_eq, options_from_collection_for_select(User.all, :id, :gradyear, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
+  <%= f.select :gradyear_eq, options_for_select( ["2017", "2016", "2018"],  @q.gradyear_eq), { :include_blank => true }, :class => "form-control" %>
+</div>
 
+<%= f.submit :class => "btn btn-primary btn-block" %>
+<!--unsure about where the clear filters tab should direct the page? Refresh to same page> users/index?-->
+<a href="/users" class="btn btn-default btn-block">Clear filters</a>
 
-<%end %>
+<hr>
+<div class="form-control">
 
+<table class="table table-striped table-hover">
+  <tr>
+<!-- <th> Photo </th>-->
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Program</th>
+    <th>Graduation Year</th>
+    <th>Industry Expertise</th>
+    <th>Functional Expertise</th>
+
+    <!--    <th>User</th> -->
+
+    <th>Actions</th>
+  </tr>
+
+  <% @q.result.each do |user| %>
+
+    <tr>
+      <!--<td><img src="<%= user.imageurl %>" class="col-sm-1"/> </td> -->
+<!--<td>
+<img src="<%= user.imageurl %>" class="col-sm-1 img-responsive"/>
+</td> -->
+      <td><%= user.firstname %> </td>
+      <td><%= user.lastname %> </td>
+      <td>   <%= user.program %> </td>
+      <td>   <%= user.gradyear %> </td>
+      <td>   <%= user.indexpert %> </td>
+      <td>   <%= user.funcexpert %> </td>
+
+      <td>
+        <a href="/critiques/new?user_id=<%= user.id %>" class="btn btn-success"> Provide Feedback</a>
+      </td>
+
+    </tr>
+  </div>
+
+  <%end %>
+</table>
 <% end %>
