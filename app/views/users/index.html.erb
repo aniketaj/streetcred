@@ -1,17 +1,41 @@
 <%= search_form_for @q do |f| %>
-<p class="lead">Narrow results:</p>
+<p class="lead">Narrow results by:</p>
 
 <div class="form-group">
   <%= f.label :program_eq, "Program" %>
   <%#= f.select :id_eq, options_from_collection_for_select(User.all, :id, :program, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
-  <%= f.select :program_eq, options_for_select( ["MMM", "2Y FT MBA"], @q.program_eq), { :include_blank => true }, :class => "form-control" %>
+  <%= f.select :program_eq, options_for_select( ["MMM", "2Y FT MBA", "1Y FT MBA", "JD-MBA"], @q.program_eq), { :include_blank => true }, :class => "form-control" %>
 
 </div>
 
 <div class="form-group">
   <%= f.label :gradyear_eq, "Graduation Year" %>
   <%#= f.select :id_eq, options_from_collection_for_select(User.all, :id, :gradyear, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
-  <%= f.select :gradyear_eq, options_for_select( ["2017", "2016", "2018"],  @q.gradyear_eq), { :include_blank => true }, :class => "form-control" %>
+  <%= f.select :gradyear_eq, options_for_select( ["2017", "2016", "2018", "2019"],  @q.gradyear_eq), { :include_blank => true }, :class => "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :indexpert_eq, "Industry Expertise" %>
+  <%#= f.select :id_eq, options_from_collection_for_select(User.all, :id, :program, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
+  <%= f.select :indexpert_eq, options_for_select(["Aerospace", "Automotive", "Consulting", "Consumer products and retail", "Education", "Fashion and apparel", "Healthcare", "Media, entertainment and advertising", "Technology"], @q.indexpert_eq), { :include_blank => true }, :class => "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :funcexpert_eq, "Functional Expertise" %>
+  <%#= f.select :id_eq, options_from_collection_for_select(User.all, :id, :program, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
+  <%= f.select :funcexpert_eq, options_for_select(["Accounting", "Economics", "Entrepreneurship", "Finance", "General Management", "Innovation", "Consulting", "Marketing", "Operations"], @q.funcexpert_eq), { :include_blank => true }, :class => "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :efftime_eq, "Morning or night person" %>
+  <%#= f.select :id_eq, options_from_collection_for_select(User.all, :id, :program, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
+  <%= f.select :efftime_eq, options_for_select(["Morning Lark", "Night Owl", "It doesn't matter"], @q.efftime_eq), { :include_blank => true }, :class => "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :poetquant_eq, "Poet or Quant" %>
+  <%#= f.select :id_eq, options_from_collection_for_select(User.all, :id, :program, @q.id_eq), { :include_blank => true }, :class => "form-control" %>
+  <%= f.select :poetquant_eq, options_for_select(["Poet", "Quant"], @q.poetquant_eq), { :include_blank => true }, :class => "form-control" %>
 </div>
 
 <%= f.submit :class => "btn btn-primary btn-block" %>

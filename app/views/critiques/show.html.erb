@@ -12,44 +12,217 @@
       <dt>Description</dt>
       <dd><%= @critique.description %></dd>
 
+<hr>
+
       <dt>Collaboration</dt>
       <dd>
+        <% if @critique.metricone==5 %>
         <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="<%= @critique.metricone %>"
-          aria-valuemin="0" aria-valuemax="100" style="width:<%= @critique.metricone %>">
-            <%= @critique.metricone %>
+          <div class="progress-bar progress-bar-success" role="progressbar" style="width: 100%">
           </div>
         </div>
-        </dd>
+        <% else %>
+        <% if @critique.metricone==4 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-primary" role="progressbar" style="width: 80%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metricone==3 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-info" role="progressbar" style="width: 60%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metricone==2 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 40%">
+          </div>
+        </div>
+        <% else %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-danger" role="progressbar" style="width: 20%">
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+        <% end %>
+        <% end %>
+      </dd>
 
+      <!-- ___________________________ -->
       <dt>Reliability</dt>
-      <dd><%= @critique.metrictwo %></dd>
+      <dd>
+        <% if @critique.metrictwo==5 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" style="width: 100%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metrictwo==4 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-primary" role="progressbar" style="width: 80%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metrictwo==3 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-info" role="progressbar" style="width: 60%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metrictwo==2 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 40%">
+          </div>
+        </div>
+        <% else %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-danger" role="progressbar" style="width: 20%">
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+        <% end %>
+        <% end %>
+      </dd>
+
 
       <dt>Communication</dt>
-      <dd><%= @critique.metricthree %></dd>
+      <dd>
+        <% if @critique.metricthree==5 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" style="width: 100%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metricthree==4 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-primary" role="progressbar" style="width: 80%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metricthree==3 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-info" role="progressbar" style="width: 60%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metricthree==2 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 40%">
+          </div>
+        </div>
+        <% else %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-danger" role="progressbar" style="width: 20%">
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+        <% end %>
+        <% end %>
+      </dd>
 
       <dt>Committment</dt>
-      <dd><%= @critique.metricfour %></dd>
+      <dd>
+        <% if @critique.metricfour==5 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" style="width: 100%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metricfour==4 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-primary" role="progressbar" style="width: 80%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metricfour==3 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-info" role="progressbar" style="width: 60%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metricfour==2 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 40%">
+          </div>
+        </div>
+        <% else %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-danger" role="progressbar" style="width: 20%">
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+        <% end %>
+        <% end %>
+      </dd>
+
+<hr>
 
       <dt>Total Score</dt>
-      <dd><%= @critique.metricfive %></dd>
+      <dd>
+        <% if @critique.metricfive>=16 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" style="width: 100%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metricfive>=12 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-primary" role="progressbar" style="width: 80%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metricfive>=8 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-info" role="progressbar" style="width: 60%">
+          </div>
+        </div>
+        <% else %>
+        <% if @critique.metricfive>=4 %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 40%">
+          </div>
+        </div>
+        <% else %>
+        <div class="progress">
+          <div class="progress-bar progress-bar-danger" role="progressbar" style="width: 20%">
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+        <% end %>
+        <% end %>
+      </dd>
 
-    <!--  <dt>User</dt>
+      <!--  <dt>User</dt>
       <dd><%= @critique.user_id %></dd> -->
 
 
     </dl>
 
-    <div class="btn-group btn-group-justified">
+    <div class="text-center">
       <a href="/critiques" class="btn btn-primary">
         Back
       </a>
+          <% if current_user.id != @critique.user_id  %>
+      <hr>
+
+      <% else %>
       <a href="/critiques/<%= @critique.id %>/edit" class="btn btn-warning">
         Edit
       </a>
       <a href="/delete_critique/<%= @critique.id %>" class="btn btn-danger" rel="nofollow">
         Delete
       </a>
+      <% end %>
+
+
     </div>
   </div>
+
+
 </div>

@@ -1,9 +1,14 @@
+
+
+
+
 <div class="page-header">
   <h3>
     FEEDBACK RECEIVED
     <!--<a href="/critiques/new" class="btn btn-lg btn-success">New Critique</a> -->
   </h3>
 </div>
+
 
 <div class="row">
   <div class="col-md-12">
@@ -22,6 +27,7 @@
       </tr>
 
       <% @receivedfbs.first(3).each do |critique| %>
+
 
       <tr>
         <td><strong><%= critique.name %></strong></td>

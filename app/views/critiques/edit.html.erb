@@ -18,49 +18,63 @@
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
-      <!-- Label and input for metricfive -->
+
+      <!-- Label and input for metricone -->
       <div class="form-group">
-        <label for="metricfive" class="control-label">
-          Metricfive
+        <label for="metricone" class="control-label">
+          Collaboration
         </label>
 
-        <input type="text" id="metricfive" name="metricfive" placeholder="Metricfive" class="form-control" value="<%= @critique.metricfive %>">
-      </div>
-
-      <!-- Label and input for metricfour -->
-      <div class="form-group">
-        <label for="metricfour" class="control-label">
-          Metricfour
-        </label>
-
-        <input type="text" id="metricfour" name="metricfour" placeholder="Metricfour" class="form-control" value="<%= @critique.metricfour %>">
-      </div>
-
-      <!-- Label and input for metricthree -->
-      <div class="form-group">
-        <label for="metricthree" class="control-label">
-          Metricthree
-        </label>
-
-        <input type="text" id="metricthree" name="metricthree" placeholder="Metricthree" class="form-control" value="<%= @critique.metricthree %>">
+        <input type="text" id="metricone" name="metricone" placeholder="Metricone" class="form-control" value="<%= @critique.metricone %>">
       </div>
 
       <!-- Label and input for metrictwo -->
       <div class="form-group">
         <label for="metrictwo" class="control-label">
-          Metrictwo
+          Reliability
         </label>
 
         <input type="text" id="metrictwo" name="metrictwo" placeholder="Metrictwo" class="form-control" value="<%= @critique.metrictwo %>">
       </div>
 
-      <!-- Label and input for metricone -->
+      <!-- Label and input for metricthree -->
       <div class="form-group">
-        <label for="metricone" class="control-label">
-          Metricone
+        <label for="metricthree" class="control-label">
+        Communication
         </label>
 
-        <input type="text" id="metricone" name="metricone" placeholder="Metricone" class="form-control" value="<%= @critique.metricone %>">
+        <input type="text" id="metricthree" name="metricthree" placeholder="Metricthree" class="form-control" value="<%= @critique.metricthree %>">
+      </div>
+
+
+
+
+      <!-- Label and input for metricfour -->
+      <div class="form-group">
+        <label for="metricfour" class="control-label">
+          Committment
+        </label>
+
+        <input type="text" id="metricfour" name="metricfour" placeholder="Metricfour" class="form-control" value="<%= @critique.metricfour %>">
+      </div>
+
+
+      <!-- Label and input for metricfive -->
+      <div class="form-group">
+        <label for="metricfive" class="control-label">
+          Total Score
+        </label>
+
+        <input type="text" id="metricfive" name="metricfive" placeholder="Metricfive" class="form-control" value="<%= @critique.metricfive %>">
+      </div>
+
+
+      <div class="form-group">
+        <label for="name" class="control-label">
+          Feedback title
+        </label>
+
+        <textarea id="name" name="name" placeholder="Name" class="form-control" rows="3"><%= @critique.name %></textarea>
       </div>
 
       <!-- Label and input for description -->
@@ -73,22 +87,16 @@
       </div>
 
       <!-- Label and input for user_id -->
-      <div class="form-group">
+    <!--  <div class="form-group">
         <label for="user_id" class="control-label">
           User
         </label>
 
         <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @critique.user_id %>">
       </div>
-
+-->
       <!-- Label and input for name -->
-      <div class="form-group">
-        <label for="name" class="control-label">
-          Name
-        </label>
 
-        <textarea id="name" name="name" placeholder="Name" class="form-control" rows="3"><%= @critique.name %></textarea>
-      </div>
 
       <button class="btn btn-warning">
         Update Critique
