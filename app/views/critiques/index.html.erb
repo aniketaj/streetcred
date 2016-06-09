@@ -18,7 +18,7 @@
         <th>TOTAL SCORE</th>
     <!--    <th>User</th> -->
 
-        <th>Actions</th>
+        <th class="col-sm-2"> Actions</th>
       </tr>
 
       <% @receivedfbs.first(3).each do |critique| %>
@@ -42,10 +42,10 @@
       <% end %>
     </table>
   </div>
-
+</div>
 <hr>
 
-  <div class="container-fluid">
+
   <div class="form-group">
       <a href="/users" class="btn btn-md btn-primary">Find Friends and Provide Feedback</a>
     </div>
@@ -57,7 +57,7 @@
       </h3>
     </div>
 
-  </div>
+
 
   <div class="row">
     <div class="col-md-12">
@@ -72,8 +72,8 @@
           <th>TOTAL SCORE</th>
       <!--    <th>User</th> -->
 
-          <th class="col-sm-2">
-        </div>Actions</th>
+          <th class="col-sm-2"> Actions</th>
+        </div>
         </tr>
 
         <% @critiques.first(3).each do |critique| %>

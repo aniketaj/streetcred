@@ -6,29 +6,36 @@
   <div class="col-md-12">
     <dl class="dl-horizontal">
 
-      <dt>Name</dt>
+      <dt>Feedback Title</dt>
       <dd><%= @critique.name %></dd>
 
       <dt>Description</dt>
       <dd><%= @critique.description %></dd>
 
-      <dt>Metricone</dt>
-      <dd><%= @critique.metricone %></dd>
+      <dt>Collaboration</dt>
+      <dd>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="<%= @critique.metricone %>"
+          aria-valuemin="0" aria-valuemax="100" style="width:<%= @critique.metricone %>">
+            <%= @critique.metricone %>
+          </div>
+        </div>
+        </dd>
 
-      <dt>Metrictwo</dt>
+      <dt>Reliability</dt>
       <dd><%= @critique.metrictwo %></dd>
 
-      <dt>Metricthree</dt>
+      <dt>Communication</dt>
       <dd><%= @critique.metricthree %></dd>
 
-      <dt>Metricfour</dt>
+      <dt>Committment</dt>
       <dd><%= @critique.metricfour %></dd>
 
-      <dt>Metricfive</dt>
+      <dt>Total Score</dt>
       <dd><%= @critique.metricfive %></dd>
 
-      <dt>User</dt>
-      <dd><%= @critique.user_id %></dd>
+    <!--  <dt>User</dt>
+      <dd><%= @critique.user_id %></dd> -->
 
 
     </dl>

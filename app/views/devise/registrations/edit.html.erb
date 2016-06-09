@@ -77,13 +77,15 @@
         Graduation Year
       </h6>
     </label>
+
+    <!--<%= select_tag(:gradyear, options_from_collection_for_select(User.all.uniq!, :gradyear, :gradyear, @user.gradyear), :class=>"form-control") %> -->
     <select class="form-control" name="user[gradyear]">
       <option>2016</option>
       <option>2017</option>
       <option>2018</option>
       <option>2019</option>
     </select>
-  </div>
+  </div> 
 
   <!-- funcexpert -->
   <div class="form-group">
