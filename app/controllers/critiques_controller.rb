@@ -3,6 +3,7 @@ class CritiquesController < ApplicationController
     #@critiques = Critique.where(:user_id => current_user.id)
     @critiques = current_user.critiques
     @receivedfbs = Critique.where(:receiver_id => current_user.id)
+    
   end
 
   def show

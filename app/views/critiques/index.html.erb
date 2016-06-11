@@ -1,12 +1,28 @@
 
 
-
-
 <div class="page-header">
-  <h3>
-    FEEDBACK RECEIVED
-    <!--<a href="/critiques/new" class="btn btn-lg btn-success">New Critique</a> -->
-  </h3>
+  <h4 Bootstrap heading class="text-info"> <strong><em>
+    My page
+</em>  </strong></h4>
+
+<div class="container">
+<div class="row">
+  <div class="col-md-2">
+    <img src="<%= current_user.imageurl %>" class="img-rounded" width="80"/>
+  </div>
+  <div class="col-md-5">
+    <h4 Bootstrap heading><strong> <em> <%= current_user.firstname %> <%= current_user.lastname %> </em>  </strong> </h4>
+    <p> <em> <%= current_user.program %> Class of <%= current_user.gradyear %> </em>  </p>
+
+    </div>
+</div>
+</div>
+</div>
+
+<div>
+  <h4 Bootstrap heading class="text-info"> <strong><em>
+  Feedback for me
+  </em>  </strong></h4>
 </div>
 
 
@@ -26,17 +42,16 @@
         <th class="col-sm-2"> Actions</th>
       </tr>
 
-      <% @receivedfbs.first(3).each do |critique| %>
-
+      <% @receivedfbs.first(5).each do |critique| %>
 
       <tr>
         <td><strong><%= critique.name %></strong></td>
         <!-- <td><%= critique.description %></td> -->
-        <td><strong><%= critique.metricone %></strong></td>
-        <td><strong><%= critique.metrictwo %></strong></td>
-        <td><strong><%= critique.metricthree %></strong></td>
-        <td><strong><%= critique.metricfour %></strong></td>
-        <td><strong><%= critique.metricfive %></strong></td>
+          <td class="lead text-center"><strong><%= critique.metricone %></strong></td>
+        <td class="lead text-center"><strong><%= critique.metrictwo %></strong></td>
+        <td class="lead text-center"><strong><%= critique.metricthree %></strong></td>
+        <td class="lead text-center"><strong><%= critique.metricfour %></strong></td>
+      <td class="lead text-center"><strong><%= critique.metricfive %></strong></td>
       <!--  <td><%= critique.user_id %></td> -->
         <td>
           <a href="/critiques/<%= critique.id %>" class="btn btn-sm btn-primary">Show</a>
@@ -57,10 +72,9 @@
     </div>
     <hr>
     <div class="form-group">
-      <h3>
-        FEEDBACK PROVIDED BY ME
-        <!--<a href="/critiques/new" class="btn btn-lg btn-success">New Critique</a> -->
-      </h3>
+      <h4 Bootstrap heading class="text-info"> <strong><em>
+      Feedback provided by me
+      </em>  </strong></h4>
     </div>
 
 
@@ -82,15 +96,15 @@
         </div>
         </tr>
 
-        <% @critiques.first(3).each do |critique| %>
+        <% @critiques.first(5).each do |critique| %>
         <tr>
           <td><strong><%= critique.name %></strong></td>
       <!--    <td><%= critique.description %></td> -->
-          <td><strong><%= critique.metricone %></strong></td>
-          <td><strong><%= critique.metrictwo %></strong></td>
-          <td><strong><%= critique.metricthree %></strong></td>
-          <td><strong><%= critique.metricfour %></strong></td>
-          <td><strong><%= critique.metricfive %></strong></td>
+          <td class="lead text-center"><strong><%= critique.metricone %></strong></td>
+          <td class="lead text-center"><strong><%= critique.metrictwo %></strong></td>
+          <td class="lead text-center"><strong><%= critique.metricthree %></strong></td>
+          <td class="lead text-center"><strong><%= critique.metricfour %></strong></td>
+          <td class="lead text-center"><strong><%= critique.metricfive %></strong></td>
         <!--  <td><%= critique.user_id %></td> -->
           <td>
             <a href="/critiques/<%= critique.id %>" class="btn btn-xs btn-primary">Show</a>
