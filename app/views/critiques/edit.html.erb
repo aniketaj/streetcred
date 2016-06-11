@@ -22,68 +22,117 @@
       <!-- Label and input for metricone -->
       <div class="form-group">
         <label for="metricone" class="control-label">
-          Collaboration
-        </label>
+          <h5 Bootstrap heading><strong>
+            Collaboration + Encouragement
+          </strong>
+        </h5>
 
-        <input type="text" id="metricone" name="metricone" placeholder="Metricone" class="form-control" value="<%= @critique.metricone %>">
-      </div>
+        <p class="lead"> <em>
+          Did the team member foster collaboration by enabling others to share ideas and take risks without feeling embarrassed or insecure?
+        </em>
+      </p>
+    </label>
+
+    <!--
+    <input type="text" id="metricone" name="metricone" placeholder="Metricone" class="form-control" value="<%= @critique.metricone %>">
+  </div>
+-->
+<select class="form-control" name="metricone">
+  <option style="color:red">1</option>
+  <option style="color:orange">2</option>
+  <option style="color:purple">3</option>
+  <option style="color:blue">4</option>
+  <option style="color:green">5</option>
+</select>
+
 
       <!-- Label and input for metrictwo -->
       <div class="form-group">
         <label for="metrictwo" class="control-label">
+          <h5 Bootstrap heading><strong>
           Reliability
-        </label>
+          </strong>
+        </h5>
 
-        <input type="text" id="metrictwo" name="metrictwo" placeholder="Metrictwo" class="form-control" value="<%= @critique.metrictwo %>">
-      </div>
+        <p class="lead"> <em>
+          Could you count on the team member to attend meetings on time, seek out tasks and complete agreed work as per schedule?
+        </em>
+      </p>
+      </label>
+
+      <select class="form-control" name="metrictwo">
+      <option style="color:red">1</option>
+      <option style="color:orange">2</option>
+      <option style="color:purple">3</option>
+      <option style="color:blue">4</option>
+      <option style="color:green">5</option>
+      </select>
 
       <!-- Label and input for metricthree -->
       <div class="form-group">
         <label for="metricthree" class="control-label">
-        Communication
-        </label>
+          <h5 Bootstrap heading><strong>
+          Structure + Communication
+          </strong>
+        </h5>
+        <p class="lead"> <em>
+          Did the team member clearly communicate about team goals, roles and execution?
+        </em>
+      </p>
+      </label>
 
-        <input type="text" id="metricthree" name="metricthree" placeholder="Metricthree" class="form-control" value="<%= @critique.metricthree %>">
-      </div>
-
+      <select class="form-control" name="metricthree">
+      <option style="color:red">1</option>
+      <option style="color:orange">2</option>
+      <option style="color:purple">3</option>
+      <option style="color:blue">4</option>
+      <option style="color:green">5</option>
+      </select>
 
 
 
       <!-- Label and input for metricfour -->
       <div class="form-group">
         <label for="metricfour" class="control-label">
+          <h5 Bootstrap heading><strong>
           Committment
+          </strong>
+        </h5>
+        <p class="lead"> <em>
+          Did the team member demonstrate committment to team objectives, and prioritize high quality outcomes?
+        </em>
+        </p>
         </label>
 
-        <input type="text" id="metricfour" name="metricfour" placeholder="Metricfour" class="form-control" value="<%= @critique.metricfour %>">
-      </div>
+        <select class="form-control" name="metricfour">
+        <option style="color:red">1</option>
+        <option style="color:orange">2</option>
+        <option style="color:purple">3</option>
+        <option style="color:blue">4</option>
+        <option style="color:green">5</option>
+        </select>
 
 
       <!-- Label and input for metricfive -->
       <div class="form-group">
-        <label for="metricfive" class="control-label">
-          Total Score
-        </label>
-
-        <input type="text" id="metricfive" name="metricfive" placeholder="Metricfive" class="form-control" value="<%= @critique.metricfive %>">
-      </div>
-
-
-      <div class="form-group">
         <label for="name" class="control-label">
-          Feedback title
+          <h5 Bootstrap heading><strong>
+        Feedback title
+      </strong> </h5>
         </label>
 
-        <textarea id="name" name="name" placeholder="Name" class="form-control" rows="3"><%= @critique.name %></textarea>
+        <textarea id="name" name="name" placeholder="Feedback Title" class="form-control" rows="3"><%= @critique.name %></textarea>
       </div>
 
       <!-- Label and input for description -->
       <div class="form-group">
         <label for="description" class="control-label">
-          Description
+          <h5 Bootstrap heading><strong>
+          Feedback Description
+        </strong> </h5>
         </label>
 
-        <textarea id="description" name="description" placeholder="Description" class="form-control" rows="3"><%= @critique.description %></textarea>
+        <textarea id="description" name="description" placeholder="Provide insights and specific examples ilustrating those insights. Use the space to reveal information about your self or the project in case you don't want the feedback to be anonymous" class="form-control" rows="3"><%= @critique.description %></textarea>
       </div>
 
       <!-- Label and input for user_id -->
@@ -96,6 +145,8 @@
       </div>
 -->
       <!-- Label and input for name -->
+
+      <input type="hidden" id="user_id" name="user_id" class="form-control" value="<%= current_user.id %>">
 
 
       <button class="btn btn-warning">
